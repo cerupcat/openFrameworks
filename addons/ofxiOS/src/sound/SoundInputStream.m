@@ -142,7 +142,7 @@ static OSStatus soundInputStreamRenderCallback(void *inRefCon,
 		}
 		
 		UInt32 overrideAudioRoute = kAudioSessionOverrideAudioRoute_Speaker;
-		success = AudioSessionSetProperty(kAudioSessionProperty_OverrideAudioRoute,
+		success = AudioSessionSetProperty(kAudioSessionProperty_OverrideCategoryDefaultToSpeaker,
 												   sizeof(UInt32),
 												   &overrideAudioRoute);
 		if(success != noErr) {
